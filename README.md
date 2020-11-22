@@ -3,6 +3,16 @@ Solution for Digital Peter competition.
 
 ![alt text](https://github.com/t0efL/Digital-Peter/blob/main/img.jpg)
 
+## Overview
+
+## Set up
+
+## Training
+
+## Inference
+
+## More information
+
 ## Team
 [Vadim Timakin](https://github.com/t0efL)  
 [Maksim Zhdanov](https://github.com/xzcodes)
