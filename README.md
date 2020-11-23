@@ -5,7 +5,7 @@ Solution for Digital Peter competition.
 
 ## Overview
 
-This is our team’s solution for Artificial Intelligence Journey 2020 Competition (Digital Peter track). This contest was about line-by-line recognition of Peter the Great’s. The task is related to several AI technologies (Computer Vision, NLP, and knowledge graphs). Competition data was prepared by Sberbank of Russia, Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences, Federal Archival Agency of Russia and Russian State Archive of Ancient Acts.
+This is our team’s solution for Artificial Intelligence Journey 2020 Competition (Digital Peter track). This contest was about line-by-line recognition of Peter the Great’s manuscripts. The task is related to several AI technologies (Computer Vision, NLP, and knowledge graphs). Competition data was prepared by Sberbank of Russia, Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences, Federal Archival Agency of Russia and Russian State Archive of Ancient Acts.
 
 https://ods.ai/competitions/aij-petr
 
