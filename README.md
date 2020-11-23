@@ -1,5 +1,4 @@
 # Digital-Peter solution
-Solution for Digital Peter competition.
 
 ![alt text](https://github.com/t0efL/Digital-Peter/blob/main/img.jpg)
 
@@ -30,6 +29,8 @@ We've used 3 different models for the final ensemble. So we have three different
 `$ python model2train.py`  // ResNext101 with Smart Resize
 
 `$ python model3train.py`  // ResNext101 with Default Resize
+
+*Approximate time for each training session - 10 hours (Google Colab Pro).*
 
 ## Inference
 
