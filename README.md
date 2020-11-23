@@ -54,7 +54,8 @@ Finally, we implemented ensemble technique for 3 backbones. We didn’t use our 
 
 ## More information
 Our article on the Medium (5 min read with solution explained):  
-Our full competition report (information about all of submissions and approaches):
+Our full competition report (information about all of submissions and approaches):  
+Our weights for each model: [Link](https://drive.google.com/drive/folders/1UYH9q7BvZnBEUL8VxbjpOr-5uZGljFCj?usp=sharing)
 
 ## Team
 [Vadim Timakin](https://github.com/t0efL)  
