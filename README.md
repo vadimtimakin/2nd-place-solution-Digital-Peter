@@ -5,6 +5,10 @@ Solution for Digital Peter competition.
 
 ## Overview
 
+This is our team’s solution for Artificial Intelligence Journey 2020 Competition (Digital Peter track). This contest was about line-by-line recognition of Peter the Great’s. The task is related to several AI technologies (Computer Vision, NLP, and knowledge graphs). Competition data was prepared by Sberbank of Russia, Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences, Federal Archival Agency of Russia and Russian State Archive of Ancient Acts.
+
+https://ods.ai/competitions/aij-petr
+
 ## Set up
 
 ## Training
@@ -21,7 +25,19 @@ Default dataset can be found [here](https://drive.google.com/file/d/1GyeiNYTh3a1
 
 ## Inference
 
+`python ocr.py`
+
 ## Results
+
+**Final Ensemble**:
+1. DenseNet161 (with latest clean samples, CER 5.025, Val CER 4.553)
+2. ResNeXt101 (with latest clean samples, CER 5.047, Val CER 4.750)
+3. ResNeXt101 (with standard samples, CER 5.011, Val CER 4.711)
+
+**Public LB scores**:
+
+**Private LB scores**:
+
 
 ## More information
 
