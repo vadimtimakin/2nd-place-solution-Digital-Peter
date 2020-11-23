@@ -40,10 +40,12 @@ Default dataset can be found [here](https://drive.google.com/file/d/1GyeiNYTh3a1
 
 ## Results
 
+Finally, we implemented ensemble technique for 3 backbones. We didn’t use our best model (CER: 5.011) with smart resize for this ensemble as its submission failed due to the time limit (moreover we kept our 9k dictionary instead of 160k dictionary due to the same problem).
+
 **Final Ensemble**:
-1. DenseNet161 (with latest clean samples, CER 5.025, Val CER 4.553)
-2. ResNeXt101 (with latest clean samples, CER 5.047, Val CER 4.750)
-3. ResNeXt101 (with standard samples, CER 5.011, Val CER 4.711)
+1. DenseNet161 (with Smart Resize, CER 5.025, Val CER 4.553)
+2. ResNeXt101 (with Smart Resize, CER 5.047, Val CER 4.750)
+3. ResNeXt101 (with Default Resize, CER 5.286, Val CER 4.711)
 
 **Public LB scores**:
 
@@ -51,6 +53,8 @@ Default dataset can be found [here](https://drive.google.com/file/d/1GyeiNYTh3a1
 
 
 ## More information
+Our article on the Medium (5 min read with solution explained): 
+Our full competition report (information about all of submissions and approaches):
 
 ## Team
 [Vadim Timakin](https://github.com/t0efL)  
