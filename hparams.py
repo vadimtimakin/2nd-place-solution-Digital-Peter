@@ -9,8 +9,12 @@ from tqdm import tqdm
 
 class Hparams:
     def __init__(self):
-        # Path to checkpoint.
-        self.chk = ''
+        # Paths to checkpoints.
+        self.chk = ''  # Training
+        # Inference
+        self.weights1 = "weights1.pt"
+        self.weights2 = "weights2.pt"
+        self.weights3 = "weights3.pt"
         
         # Path to folder with target texts
         self.trans_dir = 'train/words'
