@@ -31,9 +31,6 @@ We've used 3 different models for the final ensemble. So we have three different
 
 `python model3train.py`  // ResNext101 with Default Resize
 
-Clean dataset can be found [here](https://drive.google.com/file/d/1Qki21iEcg_iwMo3kWuaHi5AlxxpLKpof/view).  
-Default dataset can be found [here](https://drive.google.com/file/d/1GyeiNYTh3a1S-CukmLJmbLkAWjnSpmja/view?usp=sharing).
-
 ## Inference
 
 `python ocr.py`
@@ -53,9 +50,11 @@ Finally, we implemented ensemble technique for 3 backbones. We didn’t use our 
 
 
 ## More information
-Our article on the Medium (5 min read with solution explained):  
-Our full competition report (information about all of submissions and approaches):  
-Our weights for each model: [Link](https://drive.google.com/drive/folders/1UYH9q7BvZnBEUL8VxbjpOr-5uZGljFCj?usp=sharing)
+* Our article on the Medium (5 min read with solution explained):  [Link]()  
+* Our full competition report (information about all of submissions and approaches):  [Link]()  
+* We've used [OCR-transformer](https://github.com/vlomme/OCR-transformer) pipeline by Vladislav Kramarenko as the baseline.  
+* The dataset: [Link](https://drive.google.com/file/d/1Qki21iEcg_iwMo3kWuaHi5AlxxpLKpof/view).   
+* Our weights for each model: [Link](https://drive.google.com/drive/folders/1UYH9q7BvZnBEUL8VxbjpOr-5uZGljFCj?usp=sharing)
 
 ## Team
 [Vadim Timakin](https://github.com/t0efL)  
