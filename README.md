@@ -9,6 +9,8 @@ This is our team’s solution for Artificial Intelligence Journey 2020 Competiti
 
 https://ods.ai/competitions/aij-petr
 
+## Files
+
 ## Set up
 
 ## Training
