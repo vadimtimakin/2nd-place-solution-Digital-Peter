@@ -48,6 +48,10 @@ Put your weights in the folder as "weights1.pt", "weights2.pt" and "weights3.pt"
 
 You'll find predictions in stdout and "/output" folder as well.
 
+## Quick start
+
+Check out [quickstart.ipynb](https://github.com/t0efL/Digital-Peter/upload) notebook for quick start.
+
 ## Results
 
 Finally, we implemented ensemble technique for 3 backbones. We didn’t use our best model (CER: 5.011) with smart resize for this ensemble as its submission failed due to the time limit (moreover we kept our 9k dictionary instead of 160k dictionary due to the same problem).
