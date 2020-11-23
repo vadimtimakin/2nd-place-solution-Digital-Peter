@@ -15,9 +15,9 @@ https://ods.ai/competitions/aij-petr
 3. [large_dict.json](https://github.com/t0efL/Digital-Peter/blob/main/large_dict.json) - dictionary of 160k words for post processing, we were forced to give it up due to the submission runtime limit.
 4. [hparams.py](https://github.com/t0efL/Digital-Peter/blob/main/hparams.py) - module containing hyperparameters and some functions.
 5. [metadata.json](https://github.com/t0efL/Digital-Peter/blob/main/metadata.json) - file for docker-format submission.
-6. [model1train.py](https://github.com/t0efL/Digital-Peter/blob/main/model1train.py) - code for training the first model (DenseNet161 with clean dataset).
-7. [model2train.py](https://github.com/t0efL/Digital-Peter/blob/main/model2train.py) - code for training the second model (ResNext101 with clean dataset).
-8. [model3train.py](https://github.com/t0efL/Digital-Peter/blob/main/model3train.py) - code for training the third model (ResNext101 with default dataset).
+6. [model1train.py](https://github.com/t0efL/Digital-Peter/blob/main/model1train.py) - code for training the first model (DenseNet161 with Smart Resize).
+7. [model2train.py](https://github.com/t0efL/Digital-Peter/blob/main/model2train.py) - code for training the second model (ResNext101 with Smart Resize).
+8. [model3train.py](https://github.com/t0efL/Digital-Peter/blob/main/model3train.py) - code for training the third model (ResNext101 with Default Resize).
 9. [ocr.py](https://github.com/t0efL/Digital-Peter/blob/main/ocr.py) - ensemble inference.
 
 ## Set up
@@ -25,11 +25,11 @@ https://ods.ai/competitions/aij-petr
 ## Training
 We've used 3 different models for the final ensemble. So we have three different trainings. To run each of them use the following commands:
 
-`python model1train.py`  // DenseNet161 with clean data
+`python model1train.py`  // DenseNet161 with Smart Resize
 
-`python model2train.py`  // ResNext101 with clean data
+`python model2train.py`  // ResNext101 with Smart Resize
 
-`python model3train.py`  // ResNext101 with default data
+`python model3train.py`  // ResNext101 with Default Resize
 
 Clean dataset can be found [here](https://drive.google.com/file/d/1Qki21iEcg_iwMo3kWuaHi5AlxxpLKpof/view).  
 Default dataset can be found [here](https://drive.google.com/file/d/1GyeiNYTh3a1S-CukmLJmbLkAWjnSpmja/view?usp=sharing).
@@ -53,7 +53,7 @@ Finally, we implemented ensemble technique for 3 backbones. We didn’t use our 
 
 
 ## More information
-Our article on the Medium (5 min read with solution explained): 
+Our article on the Medium (5 min read with solution explained):  
 Our full competition report (information about all of submissions and approaches):
 
 ## Team
