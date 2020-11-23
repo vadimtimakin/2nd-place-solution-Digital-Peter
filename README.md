@@ -18,6 +18,7 @@ https://ods.ai/competitions/aij-petr
 6. [model1train.py](https://github.com/t0efL/Digital-Peter/blob/main/model1train.py) - code for training the first model (DenseNet161 with clean dataset).
 7. [model2train.py](https://github.com/t0efL/Digital-Peter/blob/main/model2train.py) - code for training the second model (ResNext101 with clean dataset).
 8. [model3train.py](https://github.com/t0efL/Digital-Peter/blob/main/model3train.py) - code for training the third model (ResNext101 with default dataset).
+9. [ocr.py](https://github.com/t0efL/Digital-Peter/blob/main/ocr.py) - ensemble inference.
 
 ## Set up
 
