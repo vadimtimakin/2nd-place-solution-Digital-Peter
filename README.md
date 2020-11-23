@@ -25,6 +25,8 @@ You can start using it by installing:
 
 `$ git clone https://github.com/t0efL/Digital-Peter.git`
 
+All the files containing code and hyperparameters from the original training. One thing you might want to change is working directory - the folder where the logs and the weights saved will be saved. You can do it in hparams.py. 
+
 ## Training
 We've used 3 different models for the final ensemble. So we have three different trainings. To run each of them use the following commands:
 
@@ -33,6 +35,8 @@ We've used 3 different models for the final ensemble. So we have three different
 `$ python model2train.py`  // ResNext101 with Smart Resize
 
 `$ python model3train.py`  // ResNext101 with Default Resize
+
+By default, all the logs and weights will be saved in the "log/" folder. If you want to change this working directory, you can do it in hparams.py. We recommend you to train each model appoximatly 100 epochs; our training loop contains early stopping, so if the loss stops decreasing, the training will stop. Besides, by default the logs from each training are saved in the same folder, so we recommend you to clean log folder after each training or change working directory in hparams.py. Finally, we recommend you to take the weights from each training according the CER (this will be indicated in the name of the weights), not number of epochs.
 
 *Approximate time for each training session - 10 hours (Google Colab Pro).*
 
