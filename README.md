@@ -25,15 +25,19 @@ https://ods.ai/competitions/aij-petr
 ## Training
 We've used 3 different models for the final ensemble. So we have three different trainings. To run each of them use the following commands:
 
-`python model1train.py`  // DenseNet161 with Smart Resize
+`$ python model1train.py`  // DenseNet161 with Smart Resize
 
-`python model2train.py`  // ResNext101 with Smart Resize
+`$ python model2train.py`  // ResNext101 with Smart Resize
 
-`python model3train.py`  // ResNext101 with Default Resize
+`$ python model3train.py`  // ResNext101 with Default Resize
 
 ## Inference
 
-`python ocr.py`
+Put your weights in the folder as "weights1.pt", "weights2.pt" and "weights3.pt" or just download ours (link below) and run the following command:
+
+`$ python ocr.py`
+
+You'll find predictions in stdout and "/output" folder as well.
 
 ## Results
 
