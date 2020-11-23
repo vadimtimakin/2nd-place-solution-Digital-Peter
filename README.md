@@ -23,7 +23,7 @@ https://ods.ai/competitions/aij-petr
 
 You can start using it by installing:
 
-`$ git clone https://github.com/vlomme/OCR-transformer.git`
+`$ git clone https://github.com/t0efL/Digital-Peter.git`
 
 ## Training
 We've used 3 different models for the final ensemble. So we have three different trainings. To run each of them use the following commands:
