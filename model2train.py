@@ -320,7 +320,7 @@ def train_all(best_evalloss_cer):
         plt.clf()
         plt.plot(eval_accuracy_all[-20:])
         plt.savefig(os.path.join(hp.dir, '/eval_accuracy.png'))
-        with open(os.path.join(hp.dir, "/textlog.txt", "a")) as file:
+        with open(os.path.join(hp.dir, "/textlog.txt"), "a") as file:
             file.write("epoch: " + str(epoch) + " count_bad: " + str(
                 count_bad) + " lr: " +
                        str(optimizer.param_groups[0]['lr']) + "\n")
@@ -366,24 +366,13 @@ if __name__ == '__main__':
     if args.test_dir:
         hp.test_dir = args.test_dir
 
-    lines, names = None, None
 
-    # Uploading words frequensy
-    if it_train:
-        # Uploading the file name, the list of strings for training,
-        # and the alphabet
-        names, lines, cnt, all_word = process_texts(hp.image_dir, hp.trans_dir)
-        letters = set(cnt.keys())
-        letters = sorted(list(letters))
-        letters = ['PAD', 'SOS'] + letters + ['EOS']
-    else:
-        # Alphabet
-        letters = ['PAD', 'SOS', ' ', '(', '+', '0', '1', '2', '3', '4', '5',
-                   '6', '7', '8', '9', '[', ']',
-                   'i', 'а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'й', 'к',
-                   'л', 'м', 'н', 'о', 'п', 'р',
-                   'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь',
-                   'э', 'ю', 'я', 'ѣ', 'EOS']
+    # Uploading the file name, the list of strings for training,
+    # and the alphabet
+    names, lines, cnt, all_word = process_texts(hp.image_dir, hp.trans_dir)
+    letters = set(cnt.keys())
+    letters = sorted(list(letters))
+    letters = ['PAD', 'SOS'] + letters + ['EOS']
 
     print('Символов:', len(letters), ':', ' '.join(letters))
 
@@ -392,40 +381,39 @@ if __name__ == '__main__':
     idx2p = {idx: p for idx, p in enumerate(letters)}
 
     # Creating training and validation samples.
-    if it_train:
 
-        lines_train = []
-        names_train = []
+    lines_train = []
+    names_train = []
 
-        lines_val = []
-        names_val = []
+    lines_val = []
+    names_val = []
 
-        for num, (line, name) in enumerate(zip(lines, names)):
-            # Files ending in 9 will be used for validation
-            if name[-5] == '9':
-                lines_val.append(line)
-                names_val.append(name)
-            else:
-                lines_train.append(line)
-                names_train.append(name)
+    for num, (line, name) in enumerate(zip(lines, names)):
+        # Files ending in 9 will be used for validation
+        if name[-5] == '9':
+            lines_val.append(line)
+            names_val.append(name)
+        else:
+            lines_train.append(line)
+            names_train.append(name)
 
-        image_train = generate_data(names_train, hp.image_dir)
-        image_val = generate_data(names_val, hp.image_dir)
+    image_train = generate_data(names_train, hp.image_dir)
+    image_val = generate_data(names_val, hp.image_dir)
 
-        # Initialing  dataloaders
-        train_dataset = TextLoader(image_train, lines_train, hp.image_dir,
-                                   eval=False)
-        train_loader = torch.utils.data.DataLoader(train_dataset, shuffle=True,
-                                                   batch_size=hp.batch_size,
-                                                   pin_memory=True,
-                                                   drop_last=True,
-                                                   collate_fn=TextCollate())
+    # Initialing  dataloaders
+    train_dataset = TextLoader(image_train, lines_train, hp.image_dir,
+                                eval=False)
+    train_loader = torch.utils.data.DataLoader(train_dataset, shuffle=True,
+                                                batch_size=hp.batch_size,
+                                                pin_memory=True,
+                                                drop_last=True,
+                                                collate_fn=TextCollate())
 
-        val_dataset = TextLoader(image_val, lines_val, hp.image_dir, eval=True)
-        val_loader = torch.utils.data.DataLoader(val_dataset, shuffle=False,
-                                                 batch_size=1, pin_memory=False,
-                                                 drop_last=False,
-                                                 collate_fn=TextCollate())
+    val_dataset = TextLoader(image_val, lines_val, hp.image_dir, eval=True)
+    val_loader = torch.utils.data.DataLoader(val_dataset, shuffle=False,
+                                                batch_size=1, pin_memory=False,
+                                                drop_last=False,
+                                                collate_fn=TextCollate())
 
     valid_loss_all, train_loss_all, eval_accuracy_all, eval_loss_cer_all = [], [], [], []
     epochs, best_eval_loss_cer = 0, float('inf')
@@ -434,7 +422,7 @@ if __name__ == '__main__':
     model = TransformerModel('resnext101_32x8d', len(letters), hidden=hp.hidden,
                              enc_layers=hp.enc_layers, dec_layers=hp.dec_layers,
                              nhead=hp.nhead, dropout=hp.resnextdropout,
-                             pretrained=it_train).to(device)
+                             pretrained=True).to(device)
 
     # Uploading weights
     if hp.chk:
