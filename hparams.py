@@ -9,6 +9,10 @@ from tqdm import tqdm
 
 class Hparams:
     def __init__(self):
+
+        # Working directory
+        self.dir = "log/"
+
         # Paths to checkpoints.
         self.chk = ''  # Training
         # Inference
@@ -22,7 +26,8 @@ class Hparams:
         # Path to folder with images
         self.image_dir = 'train/images'
         
-        self.test_dir = '/data/'
+        # Path to folder with test data
+        self.test_dir = 'data/'
         
         # These characters will be deleted
         self.del_sym = ['b', 'd', 'a', 'c', '×', '⊕', ')', '|', 'n', 'm', 'g', 'ǂ', '/', 'k', 'o', '–', '⊗', 'l', '…', 'u','h','і', 'f','t','p', 'r', 'e','s']
@@ -154,7 +159,7 @@ def process_image(img):
 def generate_data(names,image_dir='train1/images'):
     data_images = []
     for name in tqdm(names):
-        img = cv2.imread(image_dir+'/'+name,cv2.IMREAD_GRAYSCALE)#
+        img = cv2.imread(image_dir+'/'+name,cv2.IMREAD_GRAYSCALE)
         img = process_image(img)
         data_images.append(img.astype('uint8'))
     return data_images
