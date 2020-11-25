@@ -61,11 +61,6 @@ Finally, we implemented ensemble technique for 3 backbones. We didn’t use our 
 2. ResNeXt101 (with Smart Resize, CER 5.047, Val CER 4.750)
 3. ResNeXt101 (with Default Resize, CER 5.286, Val CER 4.711)
 
-**Public LB scores**:
-
-**Private LB scores**:
-
-
 ## More information
 * Our article on the Medium (5 min read with solution explained):  [Link]()  
 * Our full competition report (information about all of submissions and approaches):  [Link]()  
