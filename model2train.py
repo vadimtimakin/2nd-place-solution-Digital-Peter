@@ -187,7 +187,7 @@ def train(model, optimizer, criterion, iterator):
             img = np.moveaxis(src[0].cpu().numpy(), 0, 2)
             img = np.array(img)
             img = cv2.convertScaleAbs(img, alpha=255.0)
-            cv2.imwrite(os.path.join(os.path.join(hp.dir, "/img/"),
+            cv2.imwrite(os.path.join(os.path.join(hp.dir, "img/"),
                                      labels_to_text(trg[1:, 0].cpu().numpy(),
                                                     idx2p) + ".jpg"), img)
 
@@ -290,7 +290,7 @@ def train_all(best_evalloss_cer):
                 'train_loss_all': train_loss_all,
                 'eval_loss_cer_all': eval_loss_cer_all,
                 'eval_accuracy_all': eval_accuracy_all,
-            },  os.path.join(hp.dir, '/resnet50_trans_%.3f.pt' % (
+            },  os.path.join(hp.dir, 'resnet50_trans_%.3f.pt' % (
                 best_evalloss_cer)))
             print('Save best model')
         else:
@@ -303,7 +303,7 @@ def train_all(best_evalloss_cer):
                 'train_loss_all': train_loss_all,
                 'eval_loss_cer_all': eval_loss_cer_all,
                 'eval_accuracy_all': eval_accuracy_all,
-            }, os.path.join(hp.dir, '/resnet50_trans_last.pt'))
+            }, os.path.join(hp.dir, 'resnet50_trans_last.pt'))
             print('Save model')
         print(f'Time: {time.time() - start_time}s')
         print(f'Train Loss: {train_loss:.4f}')
@@ -313,14 +313,14 @@ def train_all(best_evalloss_cer):
         plt.clf()
         plt.plot(valid_loss_all[-20:])
         plt.plot(train_loss_all[-20:])
-        plt.savefig(os.path.join(hp.dir, '/all_loss.png'))
+        plt.savefig(os.path.join(hp.dir, 'all_loss.png'))
         plt.clf()
         plt.plot(eval_loss_cer_all[-20:])
-        plt.savefig(os.path.join(hp.dir,  '/loss_cer.png'))
+        plt.savefig(os.path.join(hp.dir,  'loss_cer.png'))
         plt.clf()
         plt.plot(eval_accuracy_all[-20:])
-        plt.savefig(os.path.join(hp.dir, '/eval_accuracy.png'))
-        with open(os.path.join(hp.dir, "/textlog.txt"), "a") as file:
+        plt.savefig(os.path.join(hp.dir, 'eval_accuracy.png'))
+        with open(os.path.join(hp.dir, "textlog.txt"), "a") as file:
             file.write("epoch: " + str(epoch) + " count_bad: " + str(
                 count_bad) + " lr: " +
                        str(optimizer.param_groups[0]['lr']) + "\n")
@@ -347,7 +347,7 @@ if __name__ == '__main__':
         os.makedirs(hp.dir)
 
     # Creating a folder with logs
-    os.makedirs(os.path.join(hp.dir, "/img/"), exist_ok=True)
+    os.makedirs(os.path.join(hp.dir, "img/"), exist_ok=True)
 
     # Training or prediction
     parser = argparse.ArgumentParser()
