@@ -285,7 +285,7 @@ class TransformerModelDnet(nn.Module):
 def prediction():
     """Prediction."""
 
-    os.makedirs('/output', exist_ok=True)
+    os.makedirs('./output', exist_ok=True)
     model = TripleEnsemble(model1, model2, model3, letters, 1, device, words)
 
     with torch.no_grad():
@@ -317,7 +317,7 @@ def prediction():
 
             print('pred:', pred)
 
-            with open(os.path.join('/output', filename.replace('.jpg', '.txt').replace('.png', '.txt')), 'w', encoding="utf-8") as file:
+            with open(os.path.join('./output', filename.replace('.jpg', '.txt').replace('.png', '.txt')), 'w', encoding="utf-8") as file:
                 file.write(pred.strip())
 
 
