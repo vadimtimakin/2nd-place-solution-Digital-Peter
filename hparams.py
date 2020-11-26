@@ -11,7 +11,7 @@ class Hparams:
     def __init__(self):
 
         # Working directory
-        self.dir = "log/"
+        self.dir = "./log/"
 
         # Paths to checkpoints.
         self.chk = ''  # Training
