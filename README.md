@@ -4,7 +4,7 @@
 
 ## Overview
 
-This is our team’s solution for Artificial Intelligence Journey 2020 Competition (Digital Peter track). This contest was about line-by-line recognition of Peter the Great’s manuscripts. The task is related to several AI technologies (Computer Vision, NLP, and knowledge graphs). Competition data was prepared by Sberbank of Russia, Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences, Federal Archival Agency of Russia and Russian State Archive of Ancient Acts.
+This is our team’s 2nd place solution for Artificial Intelligence Journey Junior 2020 Competition (Digital Peter track). This contest was about line-by-line recognition of Peter the Great’s manuscripts. The task is related to several AI technologies (Computer Vision, NLP, and knowledge graphs). Competition data was prepared by Sberbank of Russia, Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences, Federal Archival Agency of Russia and Russian State Archive of Ancient Acts.
 
 https://ods.ai/competitions/aij-petr
 
@@ -60,6 +60,12 @@ Finally, we implemented ensemble technique for 3 backbones. We didn’t use our 
 1. DenseNet161 (with Smart Resize, CER 5.025, Val CER 4.553)
 2. ResNeXt101 (with Smart Resize, CER 5.047, Val CER 4.750)
 3. ResNeXt101 (with Default Resize, CER 5.286, Val CER 4.711)
+
+**Public scores**:
+CER - 4.861, WER - 23.954, String Accuracy - 46.27
+
+**Private scores**:
+CER - 4.814, WER - 24.72, String Accuracy -	45.942
 
 ## More information
 * Our article on the Medium (5 min read with solution explained):  [Link]()  
