@@ -68,8 +68,8 @@ CER - 4.861, WER - 23.954, String Accuracy - 46.27
 CER - 4.814, WER - 24.72, String Accuracy -	45.942
 
 ## More information
-* Our article on the Medium (5 min read with solution explained):  [Link]()  
-* Our full competition report (information about all of submissions and approaches):  [Link]()  
+* Our article on the Medium (5 min read with solution explained):  [Link](https://xzcodes.medium.com/historical-manuscripts-recongition-using-attentionocr-ai-journey-2020-5c5db333799a)  
+* Our full competition report (information about all of submissions and approaches):  [Link](https://docs.google.com/document/d/1yce8MAW8OxfuLEPgxq8yhqttRzegP3_mTp8rbKB0SFA/edit?usp=sharing)  
 * We've used [OCR-transformer](https://github.com/vlomme/OCR-transformer) pipeline by Vladislav Kramarenko as the baseline.  
 * The dataset: [Link](https://drive.google.com/file/d/1Qki21iEcg_iwMo3kWuaHi5AlxxpLKpof/view).   
 * Our weights for each model: [Link](https://drive.google.com/drive/folders/1UYH9q7BvZnBEUL8VxbjpOr-5uZGljFCj?usp=sharing)
