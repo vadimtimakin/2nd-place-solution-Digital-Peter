@@ -6,8 +6,6 @@
 
 This is our team’s 2nd place solution for Artificial Intelligence Journey Junior 2020 Competition (Digital Peter track). This contest was about line-by-line recognition of Peter the Great’s manuscripts. The task is related to several AI technologies (Computer Vision, NLP, and knowledge graphs). Competition data was prepared by Sberbank of Russia, Saint Petersburg Institute of History (N.P.Lihachov mansion) of Russian Academy of Sciences, Federal Archival Agency of Russia and Russian State Archive of Ancient Acts.
 
-https://ods.ai/competitions/aij-petr
-
 ## Files
 1. [custom_functions.py](https://github.com/t0efL/Digital-Peter/blob/main/custom_functions.py) - custom functions, classes and augmentations we used for training and prediction.
 2. [dict.json](https://github.com/t0efL/Digital-Peter/blob/main/dict.json) - dictionary of 9k words for post processing.
