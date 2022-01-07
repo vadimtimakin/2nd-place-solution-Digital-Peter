@@ -74,4 +74,4 @@ CER - 4.814, WER - 24.72, String Accuracy -	45.942
 
 ## Team
 [Vadim Timakin](https://github.com/t0efL)  
-[Maksim Zhdanov](https://github.com/xzcodes)
+[Maksim Zhdanov](https://github.com/maxnygma)
